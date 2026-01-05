@@ -1,83 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
-  <link rel="stylesheet" href="design\style.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-</head>
-<body>
-  <section>
-    <main class="first-main">
-      <form>
-        <div class="description">
-          <h2>
-            Mortgage Calculator
-          </h2>
-          <button type="reset">Clear All</button>
-        </div>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <section>
+        <main class="first-main">
+          <form>
+            <div class="description">
+              <h2>Mortgage Calculator</h2>
+              <button type="reset">Clear All</button>
+            </div>
 
-        <div class="amount">
-          <p>
-            Mortgage Amount
+            <div class="amount">
+              <p>Mortgage Amount</p>
+              <div style="display: flex">
+                <span
+                  style="
+                    padding: 5px 10px;
+                    background-color: aliceblue;
+                    border: 2px solid rgba(0, 0, 0, 0.194);
+                    border-right: none;
+                  "
+                  >&euro;</span
+                ><input
+                  style="border-left: none; width: 225px"
+                  type="number"
+                  required
+                  id="m-amount"
+                />
+              </div>
+            </div>
+
+            <div class="term-rate">
+              <div>
+                <p>Mortgage Term</p>
+                <input type="number" required id="m-term" />
+              </div>
+              <div>
+                <p>Interest Rate</p>
+                <input type="text" id="m-rate" value="0" />
+              </div>
+            </div>
+
+            <div class="radio">
+              <p>Mortgage Type</p>
+              <div class="repay-interest">
+                <div
+                  class="radio-repay"
+                  onclick="this.querySelector('#repayment').checked = true"
+                >
+                  <input
+                    type="radio"
+                    style="accent-color: rgb(67, 7, 123)"
+                    name="radio-repay"
+                    id="repayment"
+                  /><span>Repayment</span>
+                </div>
+                <div class="radio-interest">
+                  <input type="radio" name="radio-repay" id="interest" /><span
+                    >Interest Only</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button class="calc-btn">
+                <div>
+                  <img src="assets\images\icon-calculator.svg" alt="" />
+                </div>
+                <b>Calculate Repayments</b>
+              </button>
+            </div>
+          </form>
+        </main>
+
+        <main class="second-main">
+          <h3 class="none">Your results</h3>
+          <p class="none">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
           </p>
-          <input type="text" required id="m-amount">
-        </div>
-
-
-        <div class="term-rate">
-          <div>
-            <p>Mortgage Term</p>
-            <input type="text" required id="m-term">
+          <img id="image" src="assets\images\illustration-empty.svg" alt="" />
+          <div id="txt">
+            <h3>Results shown here</h3>
+            <p>
+              Complete the form and click “calculate repayments” to <br />see
+              what your monthly repayments would be.
+            </p>
           </div>
-          <div>
-            <p>Interest Rate</p>
-            <input type="text" required id="m-rate">
+          <div class="result">
+            <h5 class="none">Your monthly repayments</h5>
+            <h3 class="monthly" style="color: hsl(61, 70%, 52%)"></h3>
+            <h5 class="none">Total you'll repay over the term</h5>
+            <h4 class="total"></h4>
           </div>
-        </div>
+        </main>
+      </section>
+    </div>
 
-
-        <div class="radio">
-          <p>Mortgage Type</p>
-          <div class="repay-interest">
-            <div class="radio-repay">
-              <input type="radio" name="mort-type" id=""><span>Repayment</span>
-            </div>
-            <div class="radio-interest">
-              <input type="radio" name="mort-type" id=""><span>Interest Only</span>
-            </div>
-          </div>
-        </div>
-
-
-        <div>
-          <button class="calc-btn">
-            <div><img src="assets\images\icon-calculator.svg" alt=""></div><b>Calculate Repayments</b>
-          </button>
-        </div>
-      </form>
-    </main>
-
-
-    <main class="second-main">
-      <img src="assets\images\illustration-empty.svg" alt="">
-      <div>
-        <h3>
-          Results shown here
-        </h3>
-        <p>
-          Complete the form and click “calculate repayments” to <br>see what 
-          your monthly repayments would be.
-        </p>
-      </div>
-    </main>
-  </section>
-  <!-- Empty results start
+    <!-- Empty results start
 
   Results shown here
 
@@ -86,23 +122,18 @@
 
   <!-- Empty results end -->
 
-  <!-- Completed results start -->
+    <!-- Completed results start -->
 
-  <!-- Your results
+    <!-- 
 
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
 
-  Your monthly repayments
 
-  Total you'll repay over the term -->
+ 
 
-  <!-- Completed results end -->
-   -->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Al-ameen Busari</a>.
-  </div>
-  <script src="index.js"></script>
-</body>
+ 
+
+    <!-- Completed results end -->
+
+    <script src="index.js"></script>
+  </body>
 </html>
