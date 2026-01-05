@@ -7,22 +7,39 @@
 }
 body{
     background-color: hsl(202, 86%, 94%);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+
+}
+[type="number"], [type = "text"]{
+    outline: none;
+    padding-left:5px !important;
+    /* border: 2px dotted dodgerblue; */
 }
 section{
-    display: flex;
+    position: relative;
+    /* display: flex; */
     /* text-align: center; */
     /* align-items: center; */
-    margin: 200px;
+    /* margin: 200px; */
+    width: 45%;
+    margin: 100px auto;
     font-family: 'poppins',sans-serif;
     font-weight: 500;
+    /* box-shadow: -5px -5px 2px rgba(0, 0, 0, 0.217), 5px 5px 2px rgba(156, 156, 156, 0.217); */
+    border-radius: 20px;
+
 }
 .first-main{
+    border-radius: 20px;
     background-color: hsl(0, 0%, 100%);
     /* text-align: center; */
     padding: 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: -10px;
+    /* border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; */
+    /* border-bottom-right-radius: -10px; */
     color: hsl(200, 26%, 54%);
 }
 .description{
@@ -36,6 +53,7 @@ section{
     text-decoration: underline;
     color: hsl(200, 26%, 54%);
     font-size: 10px;
+    cursor: pointer;
 }
 .description h2{
     font-size: large;
@@ -49,30 +67,33 @@ p{
     /* width: 200px; */
 }
 .amount input{
-    width: 252px;
+    width: 226px;
     padding: 5px 0;
     align-items: center;
 }
 .amount input:hover{
-   border: 2px solid hsl(61, 70%, 52%);
+   border: 1px solid hsl(61, 70%, 52%) !important;
 }
 .term-rate{
     display: flex;
     padding-top: 10px;
     gap: 15px;
 }
-#m-term :hover{
-    background-color: hsla(61, 70%, 52%, 0.538);
+.m-term:hover{
+    border: 1px solid hsl(61, 70%, 52%) !important;
+}
+.m-rate:hover{
+    border: 1px solid hsl(61, 70%, 52%) !important;
 }
 .term-rate input{
-    width: 120px;
+    width: 80px;
     padding: 5px 0;
 }
 .radio{
     padding-top: 10px;
 }
 .radio-repay{
-    border: 1px solid ;
+    border: 1px solid hsl(203, 88%, 87%);
     margin-bottom: 10px;
     padding: 5px ;
     width: 252px;
@@ -80,10 +101,10 @@ p{
     gap: 10px;
 }
 .repay-interest :hover{
-    background-color: hsla(61, 70%, 52%, 0.538);
+    background-color:hsla(61, 70%, 52%, 0.566);
 }
 .radio-interest{
-    border: 1px solid ;
+    border: 1px solid hsl(203, 88%, 87%) ;
     /* margin-bottom: 10px; */
     width: 252px;
     padding: 5px;
@@ -103,6 +124,7 @@ p{
     /* width: 200px; */
     font-size: 10px;
     gap: 10px;
+    cursor: pointer;
 
 }
 .calc-btn img{
@@ -118,9 +140,12 @@ span{
 }
 .placeholder{
     background-color: hsl(202, 86%, 94%);
-    
 }
 .second-main{
+    position: absolute;
+    right: -70px;
+    top: 0;
+    height: 59vh;
     text-align: center;
     background-color: hsl(202, 55%, 16%);
     color: white;
@@ -141,4 +166,18 @@ span{
 }
 .second-main img{
     width: 100px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+    section{
+        display: block;
+    }
 }
