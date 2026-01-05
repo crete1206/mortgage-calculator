@@ -172,6 +172,16 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.result{
+    display: none;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.674);
+    padding: 10px 20px ;
+    border-top: 4px solid hsl(61, 70%, 52%);
+}
+.none{
+    display: none;
+}
 
 
 

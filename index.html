@@ -84,13 +84,12 @@
                 >
                   <input
                     type="radio"
-                    style="accent-color: hsl(61, 70%, 52%);"
                     name="radio-repay"
                     id="repayment"
                   /><span>Repayment</span>
                 </div>
                 <div class="radio-interest">
-                  <input type="radio" name="radio-repay" id="interest" style="accent-color: hsl(61, 70%, 52%);" /><span
+                  <input type="radio" name="radio-repay" id="interest" /><span
                     >Interest Only</span
                   >
                 </div>
@@ -107,19 +106,31 @@
             </div>
           </form>
         </main>
-
         <main class="second-main">
+          <h3 class="none">Your results</h3>
+          <p class="none">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
           <img id="image" src="assets\images\illustration-empty.svg" alt="" />
-          <div>
+          <div id="txt">
             <h3>Results shown here</h3>
             <p>
               Complete the form and click “calculate repayments” to <br />see
               what your monthly repayments would be.
             </p>
           </div>
+          <div class="result">
+            <h5 class="none">Your monthly repayments</h5>
+            <h3 class="monthly" style="color: hsl(61, 70%, 52%)"></h3>
+            <h5 class="none">Total you'll repay over the term</h5>
+            <h4 class="total"></h4>
+          </div>
         </main>
       </section>
     </div>
+
 
     <!-- Empty results start
 
